@@ -1,8 +1,12 @@
 # Questionnaire Builder App
 
-## Project Setup
+## About the Application
 
-### Backend
+This application allows users to create and participate in questionnaires. It provides an intuitive interface for building custom questionnaires and sharing them with others for responses. Users can analyze the collected data to gain insights.
+
+### Project Setup
+
+#### Backend
 
 1. Navigate to the `backend` directory:
    ```bash
@@ -18,7 +22,7 @@
    ```
 4. The backend will run on `http://localhost:5000` (default port).
 
-### Frontend
+#### Frontend
 
 1. Navigate to the `frontend` directory:
    ```bash
@@ -34,13 +38,13 @@
    ```
 4. The frontend will run on `http://localhost:3000` (default port).
 
-### Notes
+#### Notes
 
 - Ensure you have Node.js installed.
 - The backend and frontend should run on different ports. Check the configuration if needed.
 - Open your browser and navigate to the frontend URL (`http://localhost:3000`) to use the app.
 
-  ### Technology Stack
+  #### Technology Stack
 
   - **Backend**: Node.js, Express.js
   - **Frontend**: React.js
