@@ -1,0 +1,46 @@
+# Questionnaire Builder App
+
+## Project Setup
+
+### Backend
+
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the backend server:
+   ```bash
+   npm start
+   ```
+4. The backend will run on `http://localhost:5000` (default port).
+
+### Frontend
+
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend application:
+   ```bash
+   npm start
+   ```
+4. The frontend will run on `http://localhost:3000` (default port).
+
+### Notes
+
+- Ensure you have Node.js installed.
+- The backend and frontend should run on different ports. Check the configuration if needed.
+- Open your browser and navigate to the frontend URL (`http://localhost:3000`) to use the app.
+
+  ### Technology Stack
+
+  - **Backend**: Node.js, Express.js
+  - **Frontend**: React.js
