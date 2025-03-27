@@ -57,7 +57,7 @@ const ResponseList = () => {
                 {Object.entries(response.answers).map(
                   ([question, answer], i) => (
                     <li key={i}>
-                      <strong>{question + 1}</strong>: {answer}
+                      <strong>{Number(question) + 1}</strong>: {answer}
                     </li>
                   )
                 )}
