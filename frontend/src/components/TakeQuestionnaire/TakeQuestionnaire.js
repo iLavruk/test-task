@@ -22,7 +22,7 @@ const TakeQuestionnaire = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('${API_URL}/api/responses', {
+    fetch(`${API_URL}/api/responses`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ questionnaire_id: id, answers }),
