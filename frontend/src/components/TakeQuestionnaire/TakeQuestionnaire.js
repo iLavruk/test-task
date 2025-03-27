@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { API_URL } from '../../config';
 import './TakeQuestionnaire.scss';
 
 const TakeQuestionnaire = () => {
@@ -9,7 +10,7 @@ const TakeQuestionnaire = () => {
   const [answers, setAnswers] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/questionnaires/${id}`)
+    fetch(`${API_URL}/api/questionnaires/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setQuestionnaire(data);
@@ -21,7 +22,7 @@ const TakeQuestionnaire = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:5000/api/responses', {
+    fetch('${API_URL}/api/responses', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ questionnaire_id: id, answers }),

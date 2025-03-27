@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../config';
 import './QuestionnaireList.scss';
 
 const QuestionnaireList = ({ refresh, setRefresh }) => {
@@ -13,7 +14,7 @@ const QuestionnaireList = ({ refresh, setRefresh }) => {
   // Завантажуємо список опитувань з урахуванням пагінації
   useEffect(() => {
     fetch(
-      `http://localhost:5000/api/questionnaires?page=${page}&limit=${limit}`
+      `${API_URL}/api/questionnaires?page=${page}&limit=${limit}`
     )
       .then((response) => response.json())
       .then(({ data, total }) => {
@@ -26,7 +27,7 @@ const QuestionnaireList = ({ refresh, setRefresh }) => {
 
   // Видалення опитування
   const deleteQuestionnaire = (id) => {
-    fetch(`http://localhost:5000/api/questionnaires/${id}`, {
+    fetch(`${API_URL}/api/questionnaires/${id}`, {
       method: 'DELETE',
     })
       .then(() => {

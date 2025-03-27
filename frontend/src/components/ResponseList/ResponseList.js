@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { API_URL } from '../../config';
 
 const ResponseList = () => {
   const [responses, setResponses] = useState([]);
@@ -8,14 +9,14 @@ const ResponseList = () => {
   }, []);
 
   const fetchResponses = () => {
-    fetch('http://localhost:5000/api/responses')
+    fetch(`${API_URL}/api/responses`)
       .then((response) => response.json())
       .then((data) => setResponses(data))
       .catch((error) => console.error('Помилка:', error));
   };
 
   const clearResponses = () => {
-    fetch('http://localhost:5000/api/responses', { method: 'DELETE' })
+    fetch(`${API_URL}/api/responses`, { method: 'DELETE' })
       .then(() => {
         setResponses([]); // Очищаємо список локально
         alert('Всі відповіді видалено!');

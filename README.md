@@ -20,7 +20,7 @@ This application allows users to create and participate in questionnaires. It pr
    ```bash
    npm start
    ```
-4. The backend will run on `http://localhost:5000` (default port).
+`https://test-task-server-4hb8.onrender.com` (deployed server URL).
 
 #### Frontend
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { API_URL } from '../../config';
 import './EditQuestionnaire.scss';
 
 const EditQuestionnaire = () => {
@@ -11,7 +12,7 @@ const EditQuestionnaire = () => {
 
   // Завантажуємо дані опитування
   useEffect(() => {
-    fetch(`http://localhost:5000/api/questionnaires/${id}`)
+    fetch(`${API_URL}/api/questionnaires/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setName(data.name);
@@ -32,7 +33,7 @@ const EditQuestionnaire = () => {
 
     const updatedQuestionnaire = { name, description, questions };
 
-    fetch(`http://localhost:5000/api/questionnaires/${id}`, {
+    fetch(`${API_URL}/api/questionnaires/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedQuestionnaire),

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { API_URL } from '../../config';
 import './QuestionnaireForm.scss';
 
 const QuestionnaireForm = ({ onQuestionnaireAdded }) => {
@@ -21,7 +22,7 @@ const QuestionnaireForm = ({ onQuestionnaireAdded }) => {
 
     const questionnaire = { name, description, questions };
 
-    fetch('http://localhost:5000/api/questionnaires', {
+    fetch(`${API_URL}/api/questionnaires`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(questionnaire),
