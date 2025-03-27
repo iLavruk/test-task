@@ -36,7 +36,9 @@ This application allows users to create and participate in questionnaires. It pr
    ```bash
    npm start
    ```
-4. The frontend will run on `http://localhost:3000` (default port).
+4. The frontend will run on `http://localhost:3000` (default port).  
+5. The deployed frontend application is available at:  
+   [https://questionnaire-builder-k2p6ot5ud-ilavr8725gmailcoms-projects.vercel.app/](https://questionnaire-builder-k2p6ot5ud-ilavr8725gmailcoms-projects.vercel.app/)
 
 #### Notes
 
